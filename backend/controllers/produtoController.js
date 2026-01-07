@@ -1,13 +1,13 @@
-const Produto = require("../models/Produto");
+import Produto from "../models/Produto.js";
 
-exports.listarProdutos = (req, res) => {
+export const listarProdutos = (req, res) => {
   Produto.getAll((err, results) => {
     if (err) return res.status(500).json({ error: err });
     res.json(results);
   });
 };
 
-exports.buscarProduto = (req, res) => {
+export const buscarProduto = (req, res) => {
   const { id } = req.params;
   
   Produto.getById(id, (err, results) => {
@@ -16,7 +16,7 @@ exports.buscarProduto = (req, res) => {
   });
 };
 
-exports.criarProduto = (req, res) => {
+export const criarProduto = (req, res) => {
   const data = {
     nome: req.body.nome,
     descricao: req.body.descricao,
@@ -30,7 +30,7 @@ exports.criarProduto = (req, res) => {
   });
 };
 
-exports.atualizarProduto = (req, res) => {
+export const atualizarProduto = (req, res) => {
   const { id } = req.params;
 
   const data = {
@@ -47,7 +47,7 @@ exports.atualizarProduto = (req, res) => {
   });
 };
 
-exports.deletarProduto = (req, res) => {
+export const deletarProduto = (req, res) => {
   const { id } = req.params;
 
   Produto.delete(id, (err) => {

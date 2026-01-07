@@ -1,4 +1,4 @@
-const db = require("../config/db");
+import db from "../config/db.js";
 
 class Produto {
   static getAll(callback) {
@@ -22,4 +22,4 @@ class Produto {
   }
 }
 
-module.exports = Produto;
+export default Produto;

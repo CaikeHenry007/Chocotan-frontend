@@ -1,6 +1,7 @@
-const express = require("express");
-const cors = require("cors");
-const produtoRoutes = require("./routes/produtoRoutes");
+import express from "express";
+import cors from "cors";
+import produtoRoutes from "./routes/produtoRoutes.js";
+import categoryRoutes from './routes/categoryRoutes.js';
 
 const app = express();
 
@@ -9,6 +10,8 @@ app.use(cors());
 app.use("/uploads", express.static("uploads"));
 
 app.use("/api/produtos", produtoRoutes);
+
+app.use("/categories", categoryRoutes);
 
 app.get("/", (req, res) => {
   res.send("API da marca de chocolate funcionando! 🍫");
