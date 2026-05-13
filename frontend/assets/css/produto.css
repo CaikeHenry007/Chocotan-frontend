@@ -1,0 +1,5 @@
+.produto-wrap{display:grid;grid-template-columns:480px 1fr;gap:30px;align-items:start}
+.produto-gallery img{width:100%;height:420px;object-fit:cover;border-radius:12px}
+.price-large{color:var(--choco-milk);font-weight:800;font-size:1.4rem}
+@media (max-width:1000px){ .produto-wrap{grid-template-columns:1fr} .produto-gallery img{height:360px} }
+@media (max-width:540px){ .produto-gallery img{height:280px} }
