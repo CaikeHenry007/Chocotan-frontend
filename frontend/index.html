@@ -1,29 +1,61 @@
-Bom dia, seu objetivo é fazer um site seguindo os seguintes pontos:
-- Página inicial com:
-1. Hero Section mostrando o produto principal
-2. História da marca
-3. Seção de produtos
-4. Seção “onde comprar”
-5. Contato
-- Layout responsivo para PC, tablet e celular
-- Paleta de cores "doce" baseada em chocolate 🍫 + creme 🧁
-- Animações suaves
-- Galeria de produtos
-- Página individual de produto
-- Menu mobile hambúrguer
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Chocolateria — Início</title>
+  <link rel="stylesheet" href="assets/css/global.css" />
+  <link rel="stylesheet" href="assets/css/hero.css" />
+  <link rel="stylesheet" href="assets/css/historia.css" />
+  <link rel="stylesheet" href="assets/css/produtos.css" />
+  <link rel="stylesheet" href="assets/css/onde-comprar.css" />
+  <link rel="stylesheet" href="assets/css/galeria.css" />
+  <link rel="stylesheet" href="assets/css/contato.css" />
+  <link rel="stylesheet" href="assets/css/produto.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="#">ChocoBrand</a>
+      <nav class="nav" id="nav">
+        <ul>
+          <li><a href="#hero">Início</a></li>
+          <li><a href="#historia">Nossa História</a></li>
+          <li><a href="#produtos">Produtos</a></li>
+          <li><a href="#onde-comprar">Onde comprar</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
 
-As imagens inicialmente serão utilizando a URL, porém, depois de um tempo vou utilizar os arquivos baixados no diretório do projeto.
+      <button id="btn-hamburger" class="hamburger" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
 
-As tecnologias que você vai utilizar são HTML5, CSS3 e JavaScript.
+  <main id="main">
+    <!-- Sections loaded dynamically -->
+    <div data-include="assets/sections/hero.html"></div>
+    <div data-include="assets/sections/historia.html"></div>
+    <div data-include="assets/sections/produtos.html"></div>
+    <div data-include="assets/sections/galeria.html"></div>
+    <div data-include="assets/sections/onde-comprar.html"></div>
+    <div data-include="assets/sections/contato.html"></div>
+  </main>
 
-A paleta de cores é essa:
-Cor	Hex	Uso
-Chocolate escuro	#4E2A1E	Títulos, navbar
-Chocolate ao leite	#8C4A33	Botões, destaques
-Creme	#F5E0C3	Background
-Creme claro	#FFF6E9	Cards, áreas internas
-Caramelo	#D8A25E	Chamadas e detalhes
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> ChocoBrand — Todos os direitos reservados</p>
+    </div>
+  </footer>
 
-A estrutura vai ser o seguinte, vou ter um arquivo principal (index.html) e outros arquivos secundários que serão as seções da página inicial e no index vou apenas chamar esses outros códigos, já os códigos .js das animações das seções vão estar em outros arquivos separados (cada seção vai ter um) e o código css quero fazer um para cada seção, mas também um para todos os arquivos para padronização.
-
-Quero que o design seja bem moderno como, por exemplo, essa inspiração:
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/hero.js"></script>
+  <script src="assets/js/historia.js"></script>
+  <script src="assets/js/produtos.js"></script>
+  <script src="assets/js/galeria.js"></script>
+  <script src="assets/js/onde-comprar.js"></script>
+  <script src="assets/js/contato.js"></script>
+  <script src="assets/js/produto.js"></script>
+</body>
+</html>
