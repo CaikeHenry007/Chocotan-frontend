@@ -1,6 +1,22 @@
-.contato-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-.contato-form label{display:block;margin-bottom:10px}
-.contato-form input,.contato-form textarea{
-  width:100%;padding:10px;border-radius:8px;border:1px solid rgba(0,0,0,0.06);background:white
+.contato-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
 }
-@media (max-width:900px){ .contato-grid{grid-template-columns:1fr} }
+.contato-form label {
+  display: block;
+  margin-bottom: 10px;
+}
+.contato-form input,
+.contato-form textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  background: white;
+}
+@media (max-width: 900px) {
+  .contato-grid {
+    grid-template-columns: 1fr;
+  }
+}
