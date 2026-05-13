@@ -27,11 +27,13 @@
 
 .produto-card h3 {
   margin: 10px 0 4px;
+  color: var(--choco-dark);
 }
 
 .produto-card .price {
   color: var(--choco-milk);
   font-weight: 700;
+  align-self: self-end;
 }
 
 .produto-card a {
