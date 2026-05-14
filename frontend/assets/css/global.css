@@ -59,13 +59,18 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 18px 0;
+  padding: 0;
 }
-.logo {
-  font-weight: 700;
-  color: var(--choco-dark);
+.logo{
+  display: flex;
+  align-items: center;
   text-decoration: none;
-  font-size: 1.15rem;
+}
+
+.logo-img{
+  width: 110px;
+  height: auto;
+  object-fit: contain;
 }
 
 /* nav */
