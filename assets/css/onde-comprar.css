@@ -4,9 +4,19 @@
   gap: 18px;
   margin-top: 16px;
 }
+
 .onde-grid .card {
   padding: 18px;
 }
+
+.onde-grid .card {
+  transition: var(--transition);
+}
+
+.onde-grid .card:hover {
+  transform: translateY(-5px);
+}
+
 @media (max-width: 900px) {
   .onde-grid {
     grid-template-columns: 1fr;
