@@ -144,7 +144,12 @@ strong,
     top: 0;
     height: 100vh;
     width: 260px;
-    background: var(--creme-claro);
+     background: linear-gradient(
+    90deg,
+    var(--choco-dark) 0%,
+    #6b3a2a 45%,
+    var(--choco-milk) 100%
+  );
     box-shadow: -10px 0 30px rgba(0, 0, 0, 0.08);
     transform: translateX(100%);
     transition: transform var(--transition);
